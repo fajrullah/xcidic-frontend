@@ -6,6 +6,7 @@ import { Request } from "./requestHeader";
  * return async
  */
 
+
 export const deleteBranches = (data) => {
   const result = Request().delete("/branches", {
     data: { ...data } 
@@ -101,6 +102,17 @@ export const createDemands = (data) => {
 export const createReservations = (data) => {
   const result = Request().post("/reservations", {
     ...data
+  });
+  return result;
+}
+
+/**
+ * Search
+ */
+
+export const searchDetails = (data = {}) => {
+  const result = Request().get("/timeslots/search", {
+    params: { ...data } 
   });
   return result;
 }
