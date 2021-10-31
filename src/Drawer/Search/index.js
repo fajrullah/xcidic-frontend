@@ -152,7 +152,7 @@ class Search extends React.Component {
           <TableRow><TableCell>
            <TextField
               id="outlined-text-input"
-              label="Latitude"
+              label="Latitude From"
               type="text"
               autoComplete="current-text"
               name="latitude"
@@ -164,7 +164,7 @@ class Search extends React.Component {
           <TableRow><TableCell>
            <TextField
               id="outlined-text-input"
-              label="Longitude"
+              label="Longitude From"
               type="text"
               autoComplete="current-text"
               name="longitude"
