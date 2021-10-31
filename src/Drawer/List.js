@@ -26,13 +26,13 @@ export default function ListDrawer(props) {
               <ListItemIcon>
                 <KeyboardArrowRightIcon />
               </ListItemIcon>
-              <ListItemText primary="Set on-demand" />
+              <ListItemText primary="Simulate on-demand" />
             </ListItem>
             <ListItem button onClick={() => props.onClickToolbar('reservations')}>
               <ListItemIcon>
                 <KeyboardArrowRightIcon />
               </ListItemIcon>
-              <ListItemText primary="Reservations" />
+              <ListItemText primary="Simulate Reservations" />
             </ListItem>
             <Divider />
             <ListItem button onClick={() => props.onClickToolbar('search')}>

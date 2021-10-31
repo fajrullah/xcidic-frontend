@@ -8,10 +8,10 @@ import Divider from '@mui/material/Divider';
 import ListDrawer from './List';
 import Header from './Header';
 import Branches from './Branches';
-// import Demands from './Branches';
-// import Search from './Search';
-// import Reservations from './Reservations';
-// import Timeslots from './Timeslots';
+import Demands from './Demands';
+import Search from './Search';
+import Reservations from './Reservations';
+import Timeslots from './Timeslots';
 
 const drawerWidth = 240;
 export default function PermanentDrawerLeft() {
@@ -46,7 +46,22 @@ export default function PermanentDrawerLeft() {
           {
             menu === 'branches' &&  <Branches/>
           }
-        
+
+          {
+            menu === 'timeslots' &&  <Timeslots/>
+          }
+
+          {
+            menu === 'demands' &&  <Demands/>
+          }
+
+          {
+            menu === 'reservations' &&  <Reservations/>
+          }
+
+          {
+            menu === 'search' &&  <Search/>
+          }
       </Box>
     </Box>
   );

@@ -8,6 +8,7 @@ import TableCell from '@mui/material/TableCell';
 import TableFooter from '@mui/material/TableFooter';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
+import InputLabel from '@mui/material/InputLabel';
 import { getBranches, createBranches, updateBranches, deleteBranches, searchBranches } from '../../helper/retrieveData'
 const INITIAL = {
   form: {
@@ -217,14 +218,15 @@ class Branches extends React.Component {
 
           <TableRow>
           <TableCell>
-           <TextField
-              id="outlined-text-input"
-              type="time"
-              autoComplete="current-text"
-              name="openingHours"
-              onChange={this.onChange}
-              value={item.openingHours}
-            />
+            <InputLabel id="demo-multiple-name-label">Opening Hours</InputLabel>
+            <TextField
+                id="outlined-text-input"
+                type="time"
+                autoComplete="current-text"
+                name="openingHours"
+                onChange={this.onChange}
+                value={item.openingHours}
+              />
           </TableCell></TableRow>
 
         </TableBody>
@@ -244,7 +246,7 @@ class Branches extends React.Component {
               Delete
             </Button>
             <Button onClick={() => this.searchData()}>
-              Search
+              Filter
             </Button>
             <Button variant="outlined" color="primary" onClick={() => this.setCancel()}>
               Clear
