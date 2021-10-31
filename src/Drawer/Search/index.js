@@ -274,13 +274,20 @@ class Search extends React.Component {
                                   // eslint-disable-next-line array-callback-return
                                   branchesTimeslots.map((keyComponents, iComponents) => {
                                     if(keyDay === keyComponents.day){
+                                      let price = keyComponents.price
+                                      let isOnDemand = ''
+                                      const ondemands = keyComponents.ondemands
+                                      if(ondemands){
+                                        price = ondemands.price
+                                        isOnDemand = 'HERE ON DEMAND'
+                                      }
                                       return (
                                       <TableRow>
                                         <TableCell key={`${keyDay + i + key.id + keyComponents.id + iComponents}`}>
                                         Start: {keyComponents.startTime} <br />
                                         End: {keyComponents.endTime} <br />
                                         Meal Plan Name: {keyComponents.mealPlanName} <br />
-                                        Price: {keyComponents.price}
+                                        Price: {price} <strong>{ isOnDemand }</strong>
                                         </TableCell>
                                       </TableRow>)
                                     }
